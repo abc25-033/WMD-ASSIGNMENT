@@ -1,33 +1,337 @@
+<style>
+  .suits-kingsman {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+    color: #1a1a1a;
+  }
+  .suits-kingsman h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .suits-kingsman .intro {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  .suit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+  .suit-card {
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    text-align: center;
+  }
+  .suit-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .suit-card h3 {
+    font-size: 20px;
+    margin: 10px 0 5px 0;
+  }
+  .suit-card .desc {
+    font-size: 14px;
+    color: #555;
+    min-height: 60px;
+  }
+  .suit-card .price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  .suit-card .btn {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .suit-card .btn:hover {
+    background: #333;
+  }
+</style>
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KINGSMAN</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Kingsman Suits | Tailored for the Throne</title>
+  <style>
+    /* Reset + Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 14px 32px;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #333;
+    }
+ 
+    /* Header */
+    header {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 20px 0;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .nav-links a {
+      margin-left: 30px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+ 
+    /* Hero */
+    .hero {
+      padding: 100px 0;
+      text-align: center;
+      background: #f7f7f7;
+    }
+    .hero h1 {
+      font-size: 48px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+ 
+    /* Section Base */
+    section {
+      padding: 80px 0;
+    }
+    section h2 {
+      font-size: 32px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .section-intro {
+      text-align: center;
+      color: #555;
+      margin-bottom: 50px;
+    }
+ 
+    /* About Snippet */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
+    .about-item h3 {
+      font-size: 18px;
+      margin: 15px 0 10px 0;
+      text-transform: uppercase;
+    }
+ 
+    /* Suits Preview */
+    .suit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .suit-card {
+      border: 1px solid #e5e5e5;
+      padding: 20px;
+      text-align: center;
+    }
+    .suit-card h3 {
+      font-size: 20px;
+      margin: 15px 0 5px 0;
+    }
+    .suit-card .price {
+      font-weight: bold;
+      margin: 15px 0;
+    }
+ 
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center;
+    }
+    footer p {
+      font-size: 14px;
+      color: #aaa;
+    }
+    footer .logo {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+ 
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .nav-links a {
+        margin: 0 10px;
+      }
+      .hero h1 {
+        font-size: 36px;
+      }
+      section {
+        padding: 60px 0;
+      }
+    }
+  </style>
 </head>
 <body>
+ 
   <header>
-    <h1><div class="logo"><a href="index.html">KINGSMAN</a></div></h1>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="suits.html">Suits</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section class="hero">
-    <div class="banner">
-      <img class="banner-image" src="images/WhatsApp Image 2026-04-13 at 19.48.05.jpeg.png.png" alt="KINSMAN">
+    <div class="container nav">
+      <div class="logo">Kingsman Suits</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#suits">Suits</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <h2>Welcome to KINGSMAN </h2>
-    <p>We dont just sell suits,we build confidance,one fitting at a time..</p>
+  </header>
+ 
+  <section class="hero">
+    <div class="container">
+      <h1>Dress Like a Kingsman</h1>
+      <p>Bespoke and ready-to-wear suits for men who lead. Cut sharp. Built to last.</p>
+      <a href="#suits" class="btn">View Collection</a>
+    </div>
   </section>
-  <footer class="foot">
-    <p>&copy; 2026 KINGSMAN. All rights reserved.</p>
+ 
+  <section id="about">
+    <div class="container">
+      <h2>Tailored for the Throne</h2>
+      <p class="section-intro">At Kingsman Suits, a suit should fit flawless, move easy, and command respect.</p>
+      
+      <div class="about-grid">
+        <div class="about-item">
+          <h3>Precision Tailoring</h3>
+          <p>Every seam and shoulder measured, cut, and finished with intent.</p>
+        </div>
+        <div class="about-item">
+          <h3>Premium Fabrics</h3>
+          <p>Materials that hold shape, breathe well, and age with grace.</p>
+        </div>
+        <div class="about-item">
+          <h3>Personal Service</h3>
+          <p>Unrushed fittings and honest advice. Your suit, done right.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="suits" style="background: #f7f7f7;">
+    <div class="container">
+      <h2>Featured Suits</h2>
+      <p class="section-intro">Boardroom to wedding. Walk in like you own the room.</p>
+      
+      <div class="suit-grid">
+        <div class="suit-card">
+          <img src="https://placehold.co/400x500/1a1a1a/fff?text=The+Executive" alt="The Executive Suit">
+          <h3>The Executive</h3>
+          <p>Classic navy. Slim fit. Wool blend.</p>
+          <p class="price">P3,200</p>
+          <a href="#contact" class="btn">Book Fitting</a>
+        </div>
+        
+        <div class="suit-card">
+          <img src="https://placehold.co/400x500/333/fff?text=The+Chairman" alt="The Chairman Suit">
+          <h3>The Chairman</h3>
+          <p>Charcoal grey. Bespoke. Peak lapel.</p>
+          <p class="price">From P5,500</p>
+          <a href="#contact" class="btn">Book Fitting</a>
+        </div>
+        
+        <div class="suit-card">
+          <img src="https://placehold.co/400x500/000/fff?text=The+Midnight" alt="The Midnight Tuxedo">
+          <h3>The Midnight</h3>
+          <p>Black tuxedo. Satin lapel. Tailored.</p>
+          <p class="price">P4,800</p>
+          <a href="#contact" class="btn">Book Fitting</a>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="contact">
+    <div class="container" style="text-align: center;">
+      <h2>Visit Us in Gaborone</h2>
+      <p class="section-intro">Ready for your fitting? Let’s get your measurements right.</p>
+      <p><strong>Location:</strong> CBD, Gaborone</p>
+      <p><strong>Hours:</strong> Mon - Sat, 9:00 - 18:00</p>
+      <p><strong>Phone:</strong> +267 71 234 567</p>
+      <a href="mailto:bookings@kingsmansuits.co.bw" class="btn" style="margin-top: 20px;">Email Us</a>
+    </div>
+  </section>
+ 
+  <footer>
+    <div class="container">
+      <div class="logo">Kingsman Suits</div>
+      <p>Sharp. Suave. Unshaken. © 2026 Kingsman Suits. All Rights Reserved.</p>
+    </div>
   </footer>
+ 
 </body>
 </html>
+ 
