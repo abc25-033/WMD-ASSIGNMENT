@@ -320,6 +320,36 @@ a {
     cursor: pointer;
     transition: 0.3s;
 }
+.suits-kingsman {
+    padding: 60px 20px;
+    text-align: center;
+
+    /* HERO IMAGE AS BACKGROUND */
+    background: url('images/WhatsApp Image 2026-04-13 at 19.48.05.jpeg') no-repeat center center/cover;
+
+    /* DARK OVERLAY EFFECT */
+    position: relative;
+    color: white;
+}
+
+/* DARK OVERLAY */
+.suits-kingsman::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7); /* adjusts darkness */
+    z-index: 0;
+}
+
+/* KEEP CONTENT ABOVE OVERLAY */
+.suits-kingsman * {
+    position: relative;
+    z-index: 1;
+}
+
 
 .buy-now:hover {
     background: black;
