@@ -495,5 +495,50 @@ header {
 .extra a:hover {
     text-decoration: underline;
 }
-``
+/* HEADER */
+.site-header {
+    background: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+/* LOGO */
+.logo a {
+    color: gold;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* NAV LIST */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* NAV LINKS */
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* HOVER + ACTIVE */
+.nav-list a:hover,
+.nav-list a.active {
+    color: gold;
+    border-bottom: 2px solid gold;
+    padding-bottom: 5px;
+}
  
