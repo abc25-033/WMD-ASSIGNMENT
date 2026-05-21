@@ -251,4 +251,79 @@ a {
     margin-top: 10px;
     font-size: 14px;
 }
+/* SUITS SECTION */
+.suits-kingsman {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.suits-kingsman h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.suits-kingsman .intro {
+    color: gray;
+    margin-bottom: 30px;
+}
+
+/* GRID LAYOUT */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* SUIT CARD */
+.suit-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.suit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* IMAGES */
+.suit-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* TITLE */
+.suit-card h3 {
+    margin: 10px 0;
+}
+
+/* PRICE */
+.price {
+    color: green;
+    font-weight: bold;
+}
+
+/* BUTTON */
+.buy-now {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: gold;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-now:hover {
+    background: black;
+    color: white;
+}
+``
  
