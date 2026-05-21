@@ -1,1 +1,144 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #000, #333);
+    color: #fff;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+    background: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+/* LOGO */
+.logo a {
+    color: gold;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-list a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: gold;
+    border-bottom: 2px solid gold;
+    padding-bottom: 4px;
+}
+
+/* ================= NAV TOGGLE ================= */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+/* IMAGE */
+.hero-image img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+/* TEXT OVER IMAGE */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* TITLE */
+.hero h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* PARAGRAPH */
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    padding: 12px 25px;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+    background: gold;
+    color: black;
+}
+
+.btn-primary:hover {
+    background: black;
+    color: white;
+}
+
+/* SECONDARY BUTTON */
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
 
