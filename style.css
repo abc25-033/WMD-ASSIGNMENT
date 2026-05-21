@@ -1,76 +1,82 @@
-/* Base + Reset */
+/* ================= BASE + RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.7;
   color: #1a1a1a;
   background: #fff;
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
- 
-/* Header + Nav */
+
+/* ================= HEADER + NAV (WHITE THEME) ================= */
 .site-header {
-  background: gold; /* ✅ change to gold */
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
   position: sticky;
   top: 0;
   z-index: 100;
 }
-}
+
 .site-header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
+
 .logo a {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 2px;
 }
+
 .nav-list {
   display: flex;
   gap: 35px;
   list-style: none;
 }
+
 .nav-list a {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding-bottom: 3px;
-  color: black; /* ✅ make links visible */
-  font-weight: bold;
 }
 
-}
 .nav-list a:hover,
 .nav-list a.active {
-  color: white; /* ✅ better contrast */
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #1a1a1a;
 }
-}
+
+/* NAV TOGGLE */
 .nav-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
 }
+
 .nav-toggle span {
   display: block;
   width: 25px;
@@ -78,37 +84,44 @@ a {
   background: #1a1a1a;
   margin: 5px 0;
 }
- 
-/* Hero */
+
+/* ================= HERO ================= */
 .hero {
   position: relative;
   text-align: center;
   color: #fff;
 }
+
 .hero-image img {
   width: 100%;
   height: 80vh;
   object-fit: cover;
   filter: brightness(0.6);
 }
+
 .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  padding: 0 20px;
 }
+
 .hero h1 {
   font-size: 52px;
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 15px;
 }
+
 .hero p {
   font-size: 18px;
   margin-bottom: 30px;
   color: #f1f1f1;
 }
+
+/* ================= BUTTONS ================= */
 .btn {
   display: inline-block;
   padding: 14px 32px;
@@ -118,23 +131,27 @@ a {
   margin: 0 10px;
   transition: all 0.3s;
 }
+
 .btn-primary {
   background: #C9A961;
   color: #1a1a1a;
 }
+
 .btn-primary:hover {
   background: #b8964e;
 }
+
 .btn-secondary {
   border: 2px solid #fff;
   color: #fff;
 }
+
 .btn-secondary:hover {
   background: #fff;
   color: #1a1a1a;
 }
- 
-/* Footer */
+
+/* ================= FOOTER ================= */
 .site-footer {
   background: #1a1a1a;
   color: #aaa;
@@ -142,12 +159,13 @@ a {
   padding: 30px 0;
   font-size: 14px;
 }
- 
-/* Mobile */
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
   }
+
   .navbar {
     display: none;
     position: absolute;
@@ -157,228 +175,217 @@ a {
     background: #fff;
     border-bottom: 1px solid #e5e5e5;
   }
+
   .navbar.nav-open {
     display: block;
   }
+
   .nav-list {
     flex-direction: column;
     gap: 0;
   }
+
   .nav-list li {
     border-bottom: 1px solid #f1f1f1;
   }
+
   .nav-list a {
     display: block;
     padding: 15px 20px;
   }
+
   .hero h1 {
     font-size: 36px;
   }
+
   .hero p {
     font-size: 16px;
   }
+
   .btn {
     display: block;
     margin: 10px auto;
     width: 80%;
   }
 }
-.hero {
-  position: relative;
-  text-align: center;
-  color: #fff;
-}
-.hero-image img {
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
-  filter: brightness(0.6); /* darkens image so white text pops */
-}
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  padding: 0 20px;
-}
-/* LOGIN SECTION */
+
+/* ================= LOGIN ================= */
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 }
 
-/* LOGIN BOX */
 .login-box {
-    background: white;
-    padding: 30px;
-    width: 350px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    text-align: center;
+  background: white;
+  padding: 30px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
-/* TITLE */
 .login-box h2 {
-    margin-bottom: 20px;
-    color: black;
+  margin-bottom: 20px;
+  color: black;
 }
 
-/* INPUT FIELDS */
 .login-box input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-/* BUTTON */
 .login-box button {
-    width: 100%;
-    padding: 12px;
-    background: gold;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
+  width: 100%;
+  padding: 12px;
+  background: gold;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .login-box button:hover {
-    background: black;
-    color: white;
+  background: black;
+  color: white;
 }
 
-/* EXTRA TEXT */
 .login-box p {
-    margin-top: 10px;
-    font-size: 14px;
+  margin-top: 10px;
+  font-size: 14px;
 }
-/* SUITS SECTION */
+
+/* ================= SUITS ================= */
 .suits-kingsman {
-    padding: 60px 20px;
-    text-align: center;
-    background: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+  background: url('images/WhatsApp Image 2026-04-13 at 19.48.05.jpeg') no-repeat center/cover;
+  position: relative;
+  color: white;
 }
 
-.suits-kingsman h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.suits-kingsman .intro {
-    color: gray;
-    margin-bottom: 30px;
-}
-
-/* GRID LAYOUT */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-/* SUIT CARD */
-.suit-card {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-/* HOVER EFFECT */
-.suit-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* IMAGES */
-.suit-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* TITLE */
-.suit-card h3 {
-    margin: 10px 0;
-}
-
-/* PRICE */
-.price {
-    color: green;
-    font-weight: bold;
-}
-
-/* BUTTON */
-.buy-now {
-    margin-top: 10px;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background: gold;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.suits-kingsman {
-    padding: 60px 20px;
-    text-align: center;
-
-    /* HERO IMAGE AS BACKGROUND */
-    background: url('images/WhatsApp Image 2026-04-13 at 19.48.05.jpeg') no-repeat center center/cover;
-
-    /* DARK OVERLAY EFFECT */
-    position: relative;
-    color: white;
-}
-
-/* DARK OVERLAY */
 .suits-kingsman::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.7); /* adjusts darkness */
-    z-index: 0;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
 }
 
-/* KEEP CONTENT ABOVE OVERLAY */
 .suits-kingsman * {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.suit-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.suit-card:hover {
+  transform: translateY(-10px);
+}
+
+.suit-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.price {
+  color: green;
+  font-weight: bold;
+}
+
+.buy-now {
+  width: 100%;
+  padding: 10px;
+  background: gold;
+  border: none;
+  cursor: pointer;
+}
 
 .buy-now:hover {
-    background: black;
-    color: white;
-}
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  background: black;
+  color: white;
 }
 
-
-/* HEADER */
+/* ================= SECOND THEME (BLACK HEADER) ================= */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: black;
 }
 
+.logo a {
+  color: gold;
+  font-size: 24px;
+  font-weight: bold;
+}
 
+.nav-list {
+  list-style: none;
+}
 
- 
+.nav-list li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.nav-list a {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: gold;
+}
+
+/* ================= LOGIN FORM DESIGN ================= */
+.login-form {
+  background: #ffffff;
+  padding: 30px;
+  width: 350px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+}
+
+.input-group input:focus {
+  border: 1px solid gold;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background: gold;
+}
+
+.btn-login:hover {
+  background: black;
+  color: white;
+}
 
