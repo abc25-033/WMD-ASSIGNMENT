@@ -388,4 +388,26 @@ header {
   background: black;
   color: white;
 }
+/* ✅ FORCE INDEX NAVBAR TO MATCH OTHER PAGES */
+
+.site-header {
+    background: black !important;
+}
+
+.site-header .logo a {
+    color: gold !important;
+}
+
+/* NAV LINKS */
+.site-header .nav-list a {
+    color: white !important;
+}
+
+/* HOVER EFFECT */
+.site-header .nav-list a:hover,
+.site-header .nav-list a.active {
+    color: gold !important;
+    border-bottom: 2px solid gold !important;
+}
+``
 
