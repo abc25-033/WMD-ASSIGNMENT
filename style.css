@@ -442,6 +442,46 @@ header {
     display: block;
     padding: 15px;
   }
-}
+@media (max-width: 768px) {
+
+    /* ================= NAVBAR ================= */
+    .nav-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: black;
+    }
+
+    .navbar.nav-open {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 15px;
+    }
+
+    /* ================= HERO ================= */
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+    }
 
 
